@@ -1,0 +1,1 @@
+function other(){return"other hello hi"}function test(){return"hello"}console.log("coffee");
