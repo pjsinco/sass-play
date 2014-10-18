@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-compass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
-  grunt.loadNpmTasks("matchdep");
+  //grunt.loadNpmTasks("matchdep");
 
 
   grunt.initConfig({
@@ -15,10 +15,23 @@ module.exports = function(grunt) {
         }
       }
     },
+    
+    compass: {
+      dev: {
+        options: {
+          config: 'config.rb'
+        }
+      }
+    },
 
     watch: {
       options: {
         livereload: true
+      },
+      
+      sass: {
+        files: ['_/components/sass/*.scss'],
+        tasks: ['compass:dev'] 
       },
 
       scripts: {
