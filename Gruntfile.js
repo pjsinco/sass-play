@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-compass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-contrib-jade");
   //grunt.loadNpmTasks("matchdep");
 
 
@@ -24,6 +25,24 @@ module.exports = function(grunt) {
       }
     },
 
+    jade: {
+      compile: {
+        options: {
+          pretty: true,
+        },
+        files: {
+          'index.html': ['_/components/jade/index.jade']
+        }
+//        files: [{
+//          expand: true,
+//          cwd: '_/components/jade/*.jade',
+//          src: '**/*.jade',
+//          dest: '*',
+//          ext: '.html'
+//        }]
+      }
+    },
+
     watch: {
       options: {
         livereload: true
@@ -39,6 +58,11 @@ module.exports = function(grunt) {
         tasks: ['uglify']
       },
       
+      compileHtml: {
+        files: ['_/components/jade/*.jade'],
+        tasks: ['jade']
+      },
+
       html: {
         files: ['*.html']
       }
