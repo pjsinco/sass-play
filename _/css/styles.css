@@ -102,13 +102,15 @@ a {
   color: #536870; }
   /* line 48, ../components/sass/_base.scss */
   a:hover {
-    color: #BD3613; }
+    color: #BD3613;
+    transition-property: color;
+    transition-duration: 0.5s; }
 
-/* line 54, ../components/sass/_base.scss */
+/* line 56, ../components/sass/_base.scss */
 p {
   margin-bottom: 10px; }
 
-/* line 58, ../components/sass/_base.scss */
+/* line 60, ../components/sass/_base.scss */
 .small {
   font-size: 1rem;
   color: #2176C7; }
@@ -129,7 +131,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   /*@include susy-grid-background;*/
-  padding: 3%; }
+  padding: 0 3%; }
   /* line 38, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
@@ -210,21 +212,47 @@ header img {
 /* line 124, ../components/sass/_layout.scss */
 .navigation {
   background: #175c73; }
-  /* line 128, ../components/sass/_layout.scss */
-  .navigation ul.nav li {
-    /*@include inline-block();*/ }
-    /* line 131, ../components/sass/_layout.scss */
-    .navigation ul.nav li i {
-      color: #f7b71a;
-      padding-right: 0.5em; }
-    /* line 136, ../components/sass/_layout.scss */
-    .navigation ul.nav li a {
-      display: block;
-      text-decoration: none;
-      padding: 5px 10px;
-      color: #FCF4DC; }
+  @media (min-width: 30em) {
+    /* line 127, ../components/sass/_layout.scss */
+    .navigation ul.nav {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      *zoom: 1; }
+      /* line 62, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/typography/lists/_horizontal-list.scss */
+      .navigation ul.nav li {
+        list-style-image: none;
+        list-style-type: none;
+        margin-left: 0;
+        white-space: nowrap;
+        float: left;
+        padding-left: 4px;
+        padding-right: 4px; }
+        /* line 49, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/typography/lists/_horizontal-list.scss */
+        .navigation ul.nav li:first-child {
+          padding-left: 0; }
+        /* line 50, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/typography/lists/_horizontal-list.scss */
+        .navigation ul.nav li:last-child {
+          padding-right: 0; }
+        /* line 52, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/typography/lists/_horizontal-list.scss */
+        .navigation ul.nav li.last {
+          padding-right: 0; } }
+  /* line 139, ../components/sass/_layout.scss */
+  .navigation ul.nav li i {
+    color: #f7b71a;
+    padding-right: 0.5em; }
+  /* line 144, ../components/sass/_layout.scss */
+  .navigation ul.nav li a {
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #FCF4DC; }
+    /* line 150, ../components/sass/_layout.scss */
+    .navigation ul.nav li a:hover {
+      color: white; }
 
-/* line 149, ../components/sass/_layout.scss */
+/* line 162, ../components/sass/_layout.scss */
 footer {
   overflow: hidden;
   *zoom: 1;

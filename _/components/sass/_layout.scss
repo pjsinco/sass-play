@@ -20,7 +20,7 @@ $large  : 75em; // 1200px
   @include container;
   /*@include susy-grid-background;*/
 
-  padding: 3%;
+  padding: 0 3%;
 
   // PRIMARY ---------------------------------------------- 
   .primary {
@@ -125,8 +125,16 @@ header {
   background: lighten($darkblue, 15);
 
   ul.nav {
+
+    
+    @include at-breakpoint($small) {
+
+      @include horizontal-list;
+
+    } // small
+
+    
     li {
-      /*@include inline-block();*/
 
       i {
         color: lighten($yellow, 20);
@@ -138,6 +146,11 @@ header {
         text-decoration: none;
         padding: 5px 10px;
         color: $paleryellow;
+        
+        &:hover {
+          color: lighten($paleryellow, 30);
+
+        }
       } // anchor tags
 
     }
