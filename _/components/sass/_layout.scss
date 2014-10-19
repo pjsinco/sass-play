@@ -1,0 +1,62 @@
+// susy setup -----------------------------------------------
+$total-columns: 12;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+$small: 30em;
+$medium: 47em;
+$large: 75em;
+
+// layout -----------------------------------------------
+.layout {
+  padding: 3%;
+}
+
+// header -----------------------------------------------
+
+header {
+  img {
+    width: 95%;
+    max-width: 500px;
+    margin: 2.5%;
+    margin-bottom: 0;
+  }
+}
+
+// navigation -------------------------------------------
+.navigation {
+  background: lighten($darkblue, 15);
+
+  ul.nav {
+    li {
+      /*@include inline-block();*/
+
+      i {
+        color: lighten($yellow, 20);
+        padding-right: 0.5em;
+      } // icons
+
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 5px 10px;
+        color: $paleryellow;
+      } // anchor tags
+
+    }
+  }
+
+}
+
+// footer -----------------------------------------------
+footer {
+  @include clearfix;
+
+  color: $paleyellow;
+  background-color: lighten($darkblue, 3);
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+

@@ -30,16 +30,18 @@ module.exports = function(grunt) {
         options: {
           pretty: true,
         },
-        files: {
-          'index.html': ['_/components/jade/index.jade']
-        }
-//        files: [{
-//          expand: true,
-//          cwd: '_/components/jade/*.jade',
-//          src: '**/*.jade',
-//          dest: '*',
-//          ext: '.html'
-//        }]
+        //files: {
+          //'index.html': ['_/components/jade/index.jade'],
+          //'susy-demo.html': ['_/components/jade/susy-demo.jade']
+
+        //}
+        files: [{
+          expand: true,
+          cwd: '_/components/jade/',
+          src: '**/*.jade',
+          dest: '.',
+          ext: '.html'
+        }]
       }
     },
 

@@ -1,0 +1,74 @@
+// Speakers --------------------------
+.speakers {
+  
+  .artist {
+    @include clearfix;
+
+    h3 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px dotted $lightgray;
+      margin-bottom: 5px;
+    }
+
+    img {
+      @include float-left;
+      @include border-radius();
+      width: 120px;
+      margin: {
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+  }
+}
+
+// nextmeeting --------------------------
+#nextmeeting {
+
+  @include clearfix;
+  
+  img {
+    @include float-left;
+    width: 30%;
+    max-width: 130px;
+    margin-right: 3%;
+  }
+}
+
+// sodial media icons--------------------------
+.social-media-icons {
+
+  .title {
+    @include float-left;
+  }
+
+  ul {
+    @include float-left;
+  
+    li {
+      @include inline-block();
+      margin-left: 5px;
+      
+      img {
+        width: 30px;
+        @include border-radius(50%);
+      }
+    
+    }
+  }
+}
+
+// pixgrid --------------------------
+.pixgrid {
+
+  @include clearfix;
+
+  img {
+    @include border-radius();
+    width: 30%;
+    max-width: 120px;
+    cursor: pointer;
+  }
+
+}

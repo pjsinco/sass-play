@@ -2,7 +2,7 @@ doctype html
 head
   meta(charset='UTF-8')
   title Roux Meetups
-  link(rel='stylesheet' href='_/css.styles.css')
+  link(rel='stylesheet' href='_/css/styles.css')
   meta(name='viewport' content='width=device-width, initial-scale=1')
 
 body
@@ -16,16 +16,16 @@ body
     div.navigation
       section.layout
         ul.nav
-          li: a(href='#') Home
-          li: a(href='#') About us
-          li: a(href='#') Speakers
-          li: a(href='#') Sponsors
-          li: a(href='#') Contact us
+          li #[a(href='#') #[i.fa.fa-home]Home]
+          li #[a(href='#') #[i.fa.fa-question-circle]About us]
+          li #[a(href='#') #[i.fa.fa-user]Speakers]
+          li #[a(href='#') #[i.fa.fa-heart]Sponsors]
+          li #[a(href='#') #[i.fa.fa-keyboard-o]Contact us]
 
 
   div.speakers-list
     section.layout
-      h1 Speaking at the Next Meeting
+      h1: i.fa.fa-calendar-o Speaking at the Next Meeting
       div.speakers
         article.artist
           h3 Art in Full Bloom 
@@ -70,7 +70,6 @@ body
           | If you want to keep up with what's going on with the group, 
           a(href="http://www.meetup.com") join our meetup group,
           | or sign up for our email list on the sidebar to the right. If you're in FaceBook, you can also 
-          a(href='http://')
           a(href="http://www.twitter.com") follow us on twitter 
           | or sign up for our email list on the sidebar to the right. If you're in FaceBook, you can also 
           a(href="http://www.facebook.com") join our FaceBook group.
@@ -100,7 +99,6 @@ body
           img(src="images/artwork/Riley_Rewington_04_tn.jpg" alt="Artwork 04 from Riley_Rewington")
           img(src="images/artwork/Riley_Rewington_06_tn.jpg" alt="Artwork 06 from Riley_Rewington")
 
-
       article#malinglist
         h1 Join our mailing list
         p Get notifications of our meetings and events. Sign up to our Mailing list.
@@ -117,18 +115,14 @@ body
           a(href='#') here 
           | for a map.
  
-
-
   footer
     section.layout
       div.social-media-icons
         span.title Join the movement
         ul
-          li: a(href='#'): img(alt='icon for facebook' src='images/socialmedia/facebook.png') 
           li: a(href='#'): img(alt='icon for twitter' src='images/socialmedia/twitter.png')
+          li: a(href='#'): img(alt='icon for facebook' src='images/socialmedia/facebook.png') 
           li: a(href='#'): img(alt='icon for meetup' src='images/socialmedia/meetup.png')
 
-  script(src='_/js/script.js')
+  script(src='/_/js/script.js')
   script(src='http://localhost:35729/livereload.js')
-
-  
