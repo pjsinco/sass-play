@@ -4,6 +4,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-compass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-jade");
+  grunt.loadNpmTasks("grunt-autoprefixer");
+
   //grunt.loadNpmTasks("matchdep");
 
 
@@ -45,6 +47,15 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      options: {
+      },
+      single_file: {
+        src: '_/css/styles.css',
+        dest: '_/css/styles.css'
+      }
+    },
+
     watch: {
       options: {
         livereload: true
@@ -68,6 +79,11 @@ module.exports = function(grunt) {
       html: {
         files: ['*.html']
       }
+    
+      //styles: {
+        //files: ['_/css/styles.css'],
+        //tasks: ['autoprefixer'] 
+      //}
     }
 
   

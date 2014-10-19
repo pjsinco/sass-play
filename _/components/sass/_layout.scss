@@ -1,21 +1,117 @@
-// susy setup -----------------------------------------------
+// SUSY SETUP -----------------------------------------------
+
 $total-columns: 12;
 $column-width: 4em;
 $gutter-width: 1em;
 $grid-padding: $gutter-width;
 
-$small: 30em;
-$medium: 47em;
-$large: 75em;
+$small  : 30em; // 480px at 16px font size
+$medium : 47em; // 752px at 16px
+$large  : 75em; // 1200px
 
-// layout -----------------------------------------------
+// susy mixin
+@include border-box-sizing;
+
+
+
+// LAYOUT ---------------------------------------------- 
 .layout {
+  
+  @include container;
+  /*@include susy-grid-background;*/
+
   padding: 3%;
+
+  // PRIMARY ---------------------------------------------- 
+  .primary {
+    /*margin-top: 0.2em;*/
+    @include at-breakpoint($medium) {
+      @include span-columns(8, 12);
+
+      #nextmeeting {
+        @include border-radius(20px);
+        color: $paleyellow;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        background-color: $cyan;
+        padding: 0 20px 20px 20px;
+
+        #{headings()} {
+          color: darken($cyan, 15);
+          border: none;
+          text-shadow: none;
+          margin-bottom: 20px;
+        };
+
+        a {
+          color: $darkblue;
+        }
+    
+      }
+    }
+  } // .primary
+
+  // SECONDARY ---------------------------------------------- 
+  .secondary {
+    // our media query
+    @include at-breakpoint($medium) {
+      @include span-columns(4 omega, 12);
+      font-size: 1.1rem;
+      #{headings()} {
+        font-size: 1.8rem;
+        color: $orange;
+
+      }
+    }
+
+  } // .secondary
 }
 
-// header -----------------------------------------------
+// HEADER -----------------------------------------------
 
 header {
+
+  .hero {
+    width: 100%;
+    @include at-breakpoint($medium) {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 450px;
+      background-image: 
+        linear-gradient(
+          bottom left, 
+          rgba($darkerblue, 0.6),
+          rgba($darkerblue, 0)
+        ),
+        image-url('misc/helper.jpg');
+
+        /*url('../../images/misc/helper.jpg');*/
+      /*@include background(image-url("misc/helper.jpg"));*/
+
+      background-attachment: scroll;
+      background-position: center 20%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+
+      .branding {
+        position: absolute;
+        bottom: 0;
+
+      }
+    }
+
+
+    .layout {
+      
+    }
+
+  }
+
   img {
     width: 95%;
     max-width: 500px;
@@ -24,7 +120,7 @@ header {
   }
 }
 
-// navigation -------------------------------------------
+// NAVIGATION -------------------------------------------
 .navigation {
   background: lighten($darkblue, 15);
 

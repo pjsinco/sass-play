@@ -45,7 +45,7 @@ node_modules/*
 
 images/*
 
-*.swp
-*.swo
-*.swm
+.*.swp
+.*.swo
+.*.swm
 

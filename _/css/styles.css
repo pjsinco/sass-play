@@ -113,35 +113,118 @@ p {
   font-size: 1rem;
   color: #2176C7; }
 
-/* line 12, ../components/sass/_layout.scss */
-.layout {
-  padding: 3%; }
+/* line 14, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susyone/_grid.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
-/* line 19, ../components/sass/_layout.scss */
+/* line 18, ../components/sass/_layout.scss */
+.layout {
+  *zoom: 1;
+  max-width: 61em;
+  _width: 61em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  /*@include susy-grid-background;*/
+  padding: 3%; }
+  /* line 38, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+  .layout:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 26, ../components/sass/_layout.scss */
+  .layout .primary {
+    /*margin-top: 0.2em;*/ }
+    @media (min-width: 47em) {
+      /* line 26, ../components/sass/_layout.scss */
+      .layout .primary {
+        width: 66.10169%;
+        float: left;
+        margin-right: 1.69492%; }
+        /* line 31, ../components/sass/_layout.scss */
+        .layout .primary #nextmeeting {
+          -moz-border-radius: 20px;
+          -webkit-border-radius: 20px;
+          border-radius: 20px;
+          color: #EAE3CB;
+          margin-bottom: 10px;
+          margin-top: 10px;
+          background-color: #259286;
+          padding: 0 20px 20px 20px; }
+          /* line 39, ../components/sass/_layout.scss */
+          .layout .primary #nextmeeting h1, .layout .primary #nextmeeting h2, .layout .primary #nextmeeting h3, .layout .primary #nextmeeting h4, .layout .primary #nextmeeting h5, .layout .primary #nextmeeting h6 {
+            color: #16554e;
+            border: none;
+            text-shadow: none;
+            margin-bottom: 20px; }
+          /* line 46, ../components/sass/_layout.scss */
+          .layout .primary #nextmeeting a {
+            color: #0A2933; } }
+  @media (min-width: 47em) {
+    /* line 55, ../components/sass/_layout.scss */
+    .layout .secondary {
+      width: 32.20339%;
+      float: right;
+      margin-right: 0;
+      font-size: 1.1rem; }
+      /* line 60, ../components/sass/_layout.scss */
+      .layout .secondary h1, .layout .secondary h2, .layout .secondary h3, .layout .secondary h4, .layout .secondary h5, .layout .secondary h6 {
+        font-size: 1.8rem;
+        color: #BD3613; } }
+
+/* line 74, ../components/sass/_layout.scss */
+header .hero {
+  width: 100%; }
+  @media (min-width: 47em) {
+    /* line 74, ../components/sass/_layout.scss */
+    header .hero {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 450px;
+      background-image: linear-gradient(to top right, rgba(4, 32, 41, 0.6), rgba(4, 32, 41, 0)), url('../../images/misc/helper.jpg?1378508712');
+      /*url('../../images/misc/helper.jpg');*/
+      /*@include background(image-url("misc/helper.jpg"));*/
+      background-attachment: scroll;
+      background-position: center 20%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0 auto; }
+      /* line 101, ../components/sass/_layout.scss */
+      header .hero .branding {
+        position: absolute;
+        bottom: 0; } }
+/* line 115, ../components/sass/_layout.scss */
 header img {
   width: 95%;
   max-width: 500px;
   margin: 2.5%;
   margin-bottom: 0; }
 
-/* line 28, ../components/sass/_layout.scss */
+/* line 124, ../components/sass/_layout.scss */
 .navigation {
   background: #175c73; }
-  /* line 32, ../components/sass/_layout.scss */
+  /* line 128, ../components/sass/_layout.scss */
   .navigation ul.nav li {
     /*@include inline-block();*/ }
-    /* line 35, ../components/sass/_layout.scss */
+    /* line 131, ../components/sass/_layout.scss */
     .navigation ul.nav li i {
       color: #f7b71a;
       padding-right: 0.5em; }
-    /* line 40, ../components/sass/_layout.scss */
+    /* line 136, ../components/sass/_layout.scss */
     .navigation ul.nav li a {
       display: block;
       text-decoration: none;
       padding: 5px 10px;
       color: #FCF4DC; }
 
-/* line 53, ../components/sass/_layout.scss */
+/* line 149, ../components/sass/_layout.scss */
 footer {
   overflow: hidden;
   *zoom: 1;
@@ -171,24 +254,34 @@ footer {
     margin-right: 10px;
     margin-bottom: 10px; }
 
-/* line 27, ../components/sass/_modules.scss */
+/* line 28, ../components/sass/_modules.scss */
+.branding img {
+  display: block;
+  margin: 0 auto; }
+
+/* line 36, ../components/sass/_modules.scss */
 #nextmeeting {
   overflow: hidden;
   *zoom: 1; }
-  /* line 31, ../components/sass/_modules.scss */
+  /* line 40, ../components/sass/_modules.scss */
   #nextmeeting img {
     float: left;
     width: 30%;
     max-width: 130px;
     margin-right: 3%; }
+  /* line 47, ../components/sass/_modules.scss */
+  #nextmeeting img {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px; }
 
-/* line 42, ../components/sass/_modules.scss */
+/* line 56, ../components/sass/_modules.scss */
 .social-media-icons .title {
   float: left; }
-/* line 46, ../components/sass/_modules.scss */
+/* line 60, ../components/sass/_modules.scss */
 .social-media-icons ul {
   float: left; }
-  /* line 49, ../components/sass/_modules.scss */
+  /* line 63, ../components/sass/_modules.scss */
   .social-media-icons ul li {
     display: inline-block;
     vertical-align: middle;
@@ -196,18 +289,18 @@ footer {
     *zoom: 1;
     *display: inline;
     margin-left: 5px; }
-    /* line 53, ../components/sass/_modules.scss */
+    /* line 67, ../components/sass/_modules.scss */
     .social-media-icons ul li img {
       width: 30px;
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
       border-radius: 50%; }
 
-/* line 63, ../components/sass/_modules.scss */
+/* line 77, ../components/sass/_modules.scss */
 .pixgrid {
   overflow: hidden;
   *zoom: 1; }
-  /* line 67, ../components/sass/_modules.scss */
+  /* line 81, ../components/sass/_modules.scss */
   .pixgrid img {
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;

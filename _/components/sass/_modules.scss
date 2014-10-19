@@ -23,6 +23,15 @@
   }
 }
 
+.branding {
+  
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+}
+
 // nextmeeting --------------------------
 #nextmeeting {
 
@@ -34,6 +43,11 @@
     max-width: 130px;
     margin-right: 3%;
   }
+
+  img {
+    @include border-radius();
+  }
+
 }
 
 // sodial media icons--------------------------
