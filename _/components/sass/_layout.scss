@@ -12,7 +12,44 @@ $large  : 75em; // 1200px
 // susy mixin
 @include border-box-sizing;
 
+// SPEAKERS --------------------------------------------
+.speakers-list {
 
+  @include at-breakpoint($medium) {
+    width: 100%;
+    background: $green;
+
+
+    .layout {
+      @include container;
+
+      i:before {
+        visibility: hidden;
+      }
+
+      h1 {
+        text-shadow: none;
+        color: $darkerblue;
+        font-size: 2.4em;
+        text-align: center;
+        border: none;
+      }
+
+      .artist {
+        @include span-columns(4, 12);
+
+        
+
+      }
+
+      .artist:last-child {
+        @include span-columns(4 omega, 12);
+      }
+    }
+
+  }
+
+}
 
 // LAYOUT ---------------------------------------------- 
 .layout {
