@@ -1,7 +1,7 @@
 // SUSY SETUP -----------------------------------------------
 
 $total-columns: 12;
-$column-width: 4em;
+$column-width: 5em;
 $gutter-width: 1em;
 $grid-padding: $gutter-width;
 
@@ -158,7 +158,112 @@ header {
 
 }
 
-// footer -----------------------------------------------
+// SPEAKERS LIST ----------------------------------------
+.speakers-list {
+  i:before {
+    margin-right: 3%;
+  }
+
+  img {
+    @include float-left;
+    @include border-radius();
+    width: 120px;
+    margin: {
+      right: 10px;
+      bottom: 10px;
+    }  // margin
+  } // img
+
+  @include at-breakpoint($medium) {
+
+    text-align: center;
+    background-image: linear-gradient(
+      top,
+      lighten($darkblue, 3),
+      $darkerblue 
+    );
+    overflow: hidden;
+    color: rgba($paleyellow, .5);
+    padding-bottom: remcalc(10px);  
+
+    & .layout .speakers .artist h3 {
+      border-bottom: none;
+      text-shadow: none;
+    } // h3
+
+    h1 {
+      font-size: remcalc(48px);
+      border-bottom: none;
+      text-shadow: none;
+      line-height: 1em;
+      color: $green;
+      @include at-breakpoint($large) {
+        font-size: 4rem;
+        line-height: 1em;
+      }
+    } // h1
+
+    h3 {
+      color: lighten($yellow, 10);
+      line-height: .9rem;
+      text-align: center;
+
+    } // h3
+
+    .small {
+      line-height: 1em;
+      color: lighten($darkblue, 30);
+      a {
+        color: lighten($darkblue, 30);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+
+        }
+      } // a
+
+      display: block;
+      max-width: 50%;
+      margin: 0 auto;
+    } // .small
+    
+    p:nth-of-type(2) {
+      /*font-weight: 200;*/
+      text-align: left;
+      line-height: 0;
+      @include single-transition(all, 0.3s, ease-out);
+      opacity: 0;
+    }
+
+    &:hover {
+      p:nth-of-type(2) {
+        opacity: 1.0;
+        line-height: 1.5em;
+      }
+    } // :hover
+
+    img.speaker {
+      float: none;
+      display: block;
+      width: 40%;
+      max-width: 170px;
+      margin: 0 auto;
+      @include border-radius(50%);
+    }
+
+    .artist {
+      @include span-columns(4, 12);
+      &:last-child {
+        @include span-columns(4 omega, 12);
+      }
+    }  // .artist
+    
+  } // medium
+} // .speakers-list
+
+
+// FOOTER -----------------------------------------------
 footer {
   @include clearfix;
 

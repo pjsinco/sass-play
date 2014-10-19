@@ -1,0 +1,14 @@
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+@function remcalc($size) {
+  $remsize: $size / 16px;
+  @return $remsize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: remcalc($size);
+}
+
+// usage:
+// @include font-size(14px);
+
